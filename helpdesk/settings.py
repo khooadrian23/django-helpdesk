@@ -56,6 +56,8 @@ HELPDESK_STAFF_VIEW_PROTECTOR = getattr(settings,
                                          'HELPDESK_STAFF_VIEW_PROTECTOR',
                                          lambda _: None)
 
+ALLOWED_HOSTS = ['eatco-helpdesk.onrender.com']
+
 # Enable ticket and Email attachments
 #
 # Caution! Set this to False, unless you have secured access to
