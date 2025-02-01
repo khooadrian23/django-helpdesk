@@ -8,6 +8,8 @@ RUN apt-get install -yqq \
    git
 COPY requirements.txt /opt/django-helpdesk/requirements.txt
 COPY standalone/extra-requirements.txt /opt/django-helpdesk/standalone/extra-requirements.txt
+# Pre-install packaging to satisfy dependency for django-bootstrap4-form
+RUN pip3 install packaging
 RUN pip3 install -r /opt/django-helpdesk/requirements.txt
 RUN pip3 install -r /opt/django-helpdesk/standalone/extra-requirements.txt
 COPY . /opt/django-helpdesk
